@@ -12,10 +12,10 @@ oluşturulup bu verilerin local veritabanında saklanması temeli ile oluşturul
 
 
 Takıma ait veriler (Team model class) :
- -id : int
- -isim : String
- -takım kodu : String
- -photoURL :  string
+ - id : int
+ - isim : String
+ - takım kodu : String
+ - photoURL :  string
 
 
 Uygulama çalıştırıldığı anda ilk işlem API den url e istek gönderilir ve local veritabanının boş olup olmadığı kontol edilir. 
@@ -24,8 +24,8 @@ Uygulama çalıştırıldığı anda ilk işlem API den url e istek gönderilir 
   
   - Eğer boş değil ise ikinci kontrol yapılır. API den gelen takım verileri ile local veritabanında saklanan takım verileri birbiri ile aynı mı?
     
-    => Eğer aynı ise => Gelen takım verilerinde bir değişiklik olmadığı için, daha önce veritabanında saklanmış olan fixture verileri kullanılır.
-    => Eğer aynı değil ise => API den gelen takım verilerinde değişiklik olmuş. Bu durumda takım sayısı vs değişebilme ihtimaline karşı veritabanındaki tüm veriler temizlenir ve gelen verilere göre fixture algoritması çalıştırılıp local veritabanına kaydedilir.
+    - Eğer aynı ise => Gelen takım verilerinde bir değişiklik olmadığı için, daha önce veritabanında saklanmış olan fixture verileri kullanılır.
+    - Eğer aynı değil ise => API den gelen takım verilerinde değişiklik olmuş. Bu durumda takım sayısı vs değişebilme ihtimaline karşı veritabanındaki tüm veriler temizlenir ve gelen verilere göre fixture algoritması çalıştırılıp local veritabanına kaydedilir.
     
    
  Fixture Algoritması : 
