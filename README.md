@@ -1,9 +1,9 @@
 # LeagueManager
 
--Uygulamada local veritabanı için SQLite kullanıldı.
--Uygulama, takım verilerini https://611ea8d49771bf001785c5c2.mockapi.io/teamList/v1/teams adresinden çekmektedir.
--Uygulamada picasso ve circleview kütüphaneleri kullanıldı. Bu sayede takımlara ait fotoğrafları içeren URL ler kullanılarak takım fotoğrafları uygulamada görüntülendi.
--Uygulama MVVM mimarisine uygun olarak tasarlandı.
+- Uygulamada local veritabanı için SQLite kullanıldı.
+- Uygulama, takım verilerini https://611ea8d49771bf001785c5c2.mockapi.io/teamList/v1/teams adresinden çekmektedir.
+- Uygulamada picasso ve circleview kütüphaneleri kullanıldı. Bu sayede takımlara ait fotoğrafları içeren URL ler kullanılarak takım fotoğrafları uygulamada görüntülendi.
+- Uygulama MVVM mimarisine uygun olarak tasarlandı.
 
 ************************************************************
 
