@@ -50,20 +50,29 @@ Uygulama çalıştırıldığı anda ilk işlem API den url e istek gönderilir 
  Classlar ve görevleri :
  
  MainActivity : Uygulama açıldığı anda takım verilerinin görüntülendiği ana ekran. Gelen veriler, API den gelen sonuçların listesidir.
+
  FixtureActivity : Eşleşmelerin hafta hafta gösterildiği ekrandır. Uygulama çalıştırıldığında aynı takım verileri gelmişse, buradaki liste local veritabanından alınmıştır.
  
+ 
  MatchesAdapter : Eşleşme verilerinin recyclerview ile görüntülenmesini sağlayan adapter sınıfıdır.
+ 
  TeamListAdapter : Takım verilerinin MainActivity de liste halinde görüntülenmesini sağlayan adapter sınıfıdır.
+ 
  ViewPagerAdapter : FixtureActivity sayfası üzerinde sağa ve sola kaydırılabilir ekran özelliği sunan adapter sınıfıdır.
+ 
  
  Calculation : İçersindeki Calculate statik fonksiyonu sayesinde, fixture algoritmasının oluşturulmasını sağlayan hesaplama sınıfıdır. Veriler ilk defa geldiğinde, bu sınıfın 
  fonksiyonu çağırılır ve ilgili ArrayList<Matches> verileri oluşturulup, local veritabanına kaydedilir.
  
+ 
  DB : Local veritabanı üzerinde Takımların ve Takım eşleştirilmelerine ait (Matches) tablolarının ve verilerinin kaydedildiği SQLite tan extend alan sınıftır.
+ 
  
  Model classlar: Team ve Matches verilerinin oluşturulduğu sınıflardır.
  
+ 
  APIService (Interface)  ve RetroInstance : RXJava ile oluşturulan retrofit objesinin oluşturulduğu sınıftır. Base url e istek atma fonksiyonu kendi içinde hazırda bekletilir.
+ 
  
  MyViewModel : URL e gönderilen istekler ilk aşamada bu class üzerinden gönderilir. İçeriğindeki makeGetRequest() fonksiyonu, verileri teamList değişkenine aktarır.
  
