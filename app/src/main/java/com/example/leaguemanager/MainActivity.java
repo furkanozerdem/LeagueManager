@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         myTeamList = new ArrayList<>();
         DATABASE = new DB(this);
 
-        DATABASE.deleteAllTeam();
-        DATABASE.deleteAllMatches();
+        //DATABASE.deleteAllTeam();
+        //DATABASE.deleteAllMatches();
         //DATABASE.getAllTeamFromDB();
 
 
@@ -98,12 +98,11 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Veriler, daha önce çekilen verilerle uyuşuyor.", Toast.LENGTH_LONG).show();
                                 //eşleşmelere ait veriler burda çekilecek.
 
-
-
                             }
 
                             else { //daha önce çekilen verilerden farklı veriler gelmişse
                                 DATABASE.deleteAllTeam(); //veritabanını temizle
+                                DATABASE.deleteAllMatches();
                                 for (int i = 0; i < myTeamList.size(); i++) { //verileri yeniden ekle
                                     DATABASE.addTeam(myTeamList.get(i));
                                 }
