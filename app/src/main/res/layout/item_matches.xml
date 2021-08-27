@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/purple_200">
+
+
+    <TextView
+        android:id="@+id/teamOneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/teamOnePic"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/teamOnePic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/teamTwoPic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamOneName"
+        tools:ignore="MissingConstraints" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/teamTwoPic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/teamOnePic"
+        app:layout_constraintTop_toBottomOf="@+id/teamTwoName"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/teamTwoName"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/teamTwoPic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/matchDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/teamOneCode"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="17dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/teamOnePic" />
+
+    <TextView
+        android:id="@+id/teamTwoCode"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/matchDate"
+        app:layout_constraintStart_toStartOf="@+id/teamTwoPic"
+        app:layout_constraintTop_toTopOf="@+id/matchDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>
